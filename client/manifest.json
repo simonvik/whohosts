@@ -1,0 +1,27 @@
+{
+	"manifest_version": 2,
+	"name": "whohosts",
+	"version": "0.1",
+
+
+	"background": {
+		"scripts": ["background.js"]
+	},
+
+	
+	"permissions": [ "webRequest", "tabs", "http://*/*", "https://*/*" ],
+
+	"content_scripts": [{
+		"matches": [ "http://*/*", "https://*/*"],
+		"js": ["hostmap.js", "main.js"]
+	}],
+
+
+	"page_action": {
+		"default_icon": "icon.png",
+		"default_title": "Click for more details."
+	}
+
+
+
+}
